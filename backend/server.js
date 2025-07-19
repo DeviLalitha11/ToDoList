@@ -4,7 +4,9 @@ const cors = require('cors');
 
 const app = express();
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+    origin: 'https://devi-to-do-list.netlify.app'
+}));
 
 // Log to check if env is loaded
 console.log('MONGODB_URI:', process.env.MONGODB_URI);
