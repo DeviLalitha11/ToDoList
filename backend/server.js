@@ -46,6 +46,16 @@ app.post('/text', async (req, res) => {
     }
 });
 
+app.put('/edit/:id', async (req, res) => {
+    try {
+        const id = req.params.id;
+        const updated = await Text.findByIdAndUpdate(id, { name: req.body.name }, { new: true });
+        res.json({ success: true, message: 'Text updated successfully!', data: updated });
+    } catch (error) {
+        res.status(500).json({ error: 'Error updating text' });
+    }
+});
+
 app.delete('/delete/:id', async (req, res) => {
     try {
         const id = req.params.id;
