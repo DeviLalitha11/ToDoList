@@ -6,17 +6,15 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-// Use environment variable for MongoDB URI
+// Log to check if env is loaded
+console.log('MONGODB_URI:', process.env.MONGODB_URI);
+
 const MONGODB_URI = process.env.MONGODB_URI;
 const PORT = process.env.PORT || 3000;
 
-// MongoDB Connection
-mongoose.connect(MONGODB_URI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-})
+mongoose.connect(MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => console.log('Connected to MongoDB'))
-    .catch(error => console.error('Error connecting:', error))
+    .catch(error => console.error('Error connecting:', error.message));
 
 // Schema & Model
 const textSchema = new mongoose.Schema({
