@@ -1,4 +1,4 @@
-/* General Page Styling */
+/* General Styling */
 body {
   font-family: 'Poppins', sans-serif;
   background: linear-gradient(135deg, #e0f7fa, #80deea);
@@ -40,7 +40,7 @@ form {
   align-items: center;
 }
 
-/* Input Field */
+/* Input */
 input {
   width: 90%;
   padding: 12px;
@@ -57,38 +57,49 @@ input:focus {
   box-shadow: 0 0 8px rgba(0, 121, 107, 0.3);
 }
 
-/* Buttons */
-button {
-  padding: 5px 16px;
-  margin: 5px;
+/* Add Button */
+button.add {
+  background-color: #007bff;
+  color: white;
   border: none;
-  border-radius: 5px;
+  padding: 10px 20px;
+  margin: 10px 0;
+  border-radius: 8px;
   font-weight: bold;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: 0.3s;
 }
 
-button.icon {
-  background: none;
-  border: none;
-  cursor: pointer;
-  margin-left: 10px;
-  font-size: 18px;
-  transition: transform 0.2s;
+button.add:hover {
+  background-color: #0056b3;
 }
 
-button.icon:hover {
-  transform: scale(1.2);
+/* To-Do List */
+ol {
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
 }
 
-button.icon.edit i {
-  color: #ffc107;
+li {
+  background: #f1f1f1;
+  padding: 12px;
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+  word-break: break-word;
 }
 
-button.icon.delete i {
-  color: #dc3545;
+li:hover {
+  transform: scale(1.02);
+  background: #e0f2f1;
 }
 
+/* Icon Buttons */
 .icon-btn {
   background: transparent;
   border: none;
@@ -116,82 +127,18 @@ button.icon.delete i {
   color: #dc3545;
 }
 
-
-button.add {
-  background-color: #007bff;
-  color: white;
-}
-
-button.add:hover {
-  background-color: #0056b3;
-}
-
-button.delete {
-  background-color: #dc3545;
-  color: white;
-}
-
-button.delete:hover {
-  background-color: #a71d2a;
-}
-
-button.edit {
-  background-color: #ffc107;
-  color: black;
-}
-
-button.edit:hover {
-  background-color: #e0a800;
-}
-
-/* To-Do List */
-ol {
-  list-style: none;
-  padding: 0;
-  margin-top: 15px;
-}
-
-li {
-  background: #f1f1f1;
-  padding: 12px;
-  margin: 10px 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-radius: 8px;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-  transition: 0.3s;
-  flex-wrap: wrap;
-  word-break: break-word;
-}
-
-li:hover {
-  transform: scale(1.02);
-  background: #e0f2f1;
-}
-
-/* Delete Button inside List */
-li button {
-  background: #d32f2f;
-  padding: 5px 12px;
-  font-size: 14px;
-  border-radius: 6px;
-  margin-top: 5px;
-  transition: 0.3s;
-}
-
-li button:hover {
-  background: #b71c1c;
-  transform: scale(1.05);
-}
-
-/* Responsive for small screens */
+/* Responsive */
 @media (max-width: 500px) {
   h1 {
     font-size: 22px;
   }
 
-  input, button {
+  input {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  button.add {
     font-size: 14px;
     padding: 10px;
   }
@@ -201,7 +148,7 @@ li button:hover {
     align-items: flex-start;
   }
 
-  li button {
-    width: 100%;
+  .icon-btn {
+    margin-top: 5px;
   }
 }
