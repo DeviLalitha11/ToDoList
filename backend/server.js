@@ -7,7 +7,7 @@ app.use(express.json());
 app.use(cors());
 
 // Use environment variable for MongoDB URI
-const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/mydatabase';
+const MONGODB_URI = process.env.MONGODB_URI;
 const PORT = process.env.PORT || 3000;
 
 // MongoDB Connection
