@@ -54,7 +54,6 @@ const App = () => {
     <div className='container'>
       <h1>To Do List</h1>
       <form onSubmit={addOrEditData}>
-        <label>Task:</label>
         <input
           type='text'
           placeholder='Enter your task'
