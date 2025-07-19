@@ -99,6 +99,12 @@ li:hover {
   background: #e0f2f1;
 }
 
+/* Icons container aligned right */
+.icons {
+  display: flex;
+  align-items: center;
+}
+
 /* Icon Buttons */
 .icon-btn {
   background: transparent;
