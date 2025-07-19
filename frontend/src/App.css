@@ -68,6 +68,28 @@ button {
   transition: all 0.3s ease;
 }
 
+button.icon {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: 10px;
+  font-size: 18px;
+  transition: transform 0.2s;
+}
+
+button.icon:hover {
+  transform: scale(1.2);
+}
+
+button.icon.edit i {
+  color: #ffc107;
+}
+
+button.icon.delete i {
+  color: #dc3545;
+}
+
+
 button.add {
   background-color: #007bff;
   color: white;
