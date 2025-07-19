@@ -70,8 +70,12 @@ const App = () => {
         {data.map((item) => (
           <li key={item._id}>
             {item.name}
-            <button className='edit' onClick={() => startEdit(item)}>Edit</button>
-            <button className='delete' onClick={() => deleteData(item._id)}>Delete</button>
+            <button className='icon edit' onClick={() => startEdit(item)}>
+              <i className="fas fa-edit"></i>
+            </button>
+            <button className='icon delete' onClick={() => deleteData(item._id)}>
+              <i className="fas fa-trash-alt"></i>
+            </button>
           </li>
         ))}
       </ol>
