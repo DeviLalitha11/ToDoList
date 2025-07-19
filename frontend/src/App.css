@@ -126,13 +126,13 @@ li:hover {
   transform: scale(1.1);
 }
 
-/* .icon-btn.edit i {
+.icon-btn.edit i {
   color: #ffc107;
 }
 
 .icon-btn.delete i {
   color: #dc3545;
-} */
+}
 
 /* Responsive */
 @media (max-width: 500px) {
