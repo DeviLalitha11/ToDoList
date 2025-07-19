@@ -67,19 +67,21 @@ const App = () => {
       </form>
 
       <ol>
-        {data.map((item) => (
-          <li key={item._id}>
-            {item.name}
-            <button className='icon-btn edit' onClick={() => startEdit(item)} title="Edit">
-              <i className="fas fa-pen"></i>
-            </button>
+  {data.map((item) => (
+    <li key={item._id}>
+      <span>{item.name}</span>
+      <div className="icons">
+        <button className='icon-btn edit' onClick={() => startEdit(item)} title="Edit">
+          <i className="fas fa-pen"></i>
+        </button>
+        <button className='icon-btn delete' onClick={() => deleteData(item._id)} title="Delete">
+          <i className="fas fa-trash"></i>
+        </button>
+      </div>
+    </li>
+  ))}
+</ol>
 
-            <button className='icon-btn delete' onClick={() => deleteData(item._id)} title="Delete">
-              <i className="fas fa-trash"></i>
-          </button>
-          </li>
-        ))}
-      </ol>
     </div>
   );
 };
