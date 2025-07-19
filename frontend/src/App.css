@@ -59,20 +59,40 @@ input:focus {
 
 /* Buttons */
 button {
-  background: #00796b;
-  color: white;
+  padding: 8px 16px;
+  margin: 5px;
   border: none;
-  padding: 10px 20px;
-  font-size: 16px;
-  border-radius: 8px;
+  border-radius: 5px;
+  font-weight: bold;
   cursor: pointer;
-  transition: 0.3s;
-  margin-top: 10px;
+  transition: all 0.3s ease;
 }
 
-button:hover {
-  background: #004d40;
-  transform: scale(1.05);
+button.add {
+  background-color: #007bff;
+  color: white;
+}
+
+button.add:hover {
+  background-color: #0056b3;
+}
+
+button.delete {
+  background-color: #dc3545;
+  color: white;
+}
+
+button.delete:hover {
+  background-color: #a71d2a;
+}
+
+button.edit {
+  background-color: #ffc107;
+  color: black;
+}
+
+button.edit:hover {
+  background-color: #e0a800;
 }
 
 /* To-Do List */
