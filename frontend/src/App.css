@@ -89,6 +89,33 @@ button.icon.delete i {
   color: #dc3545;
 }
 
+.icon-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  margin-left: 5px;
+  font-size: 16px;
+  transition: transform 0.2s;
+  width: 30px;
+  height: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-btn:hover {
+  transform: scale(1.1);
+}
+
+.icon-btn.edit i {
+  color: #ffc107;
+}
+
+.icon-btn.delete i {
+  color: #dc3545;
+}
+
 
 button.add {
   background-color: #007bff;
