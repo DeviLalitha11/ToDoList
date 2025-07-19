@@ -12,7 +12,7 @@ const App = () => {
 
   const fetchData = async () => {
     try {
-      const response = await axios.get("http://localhost:3000/data");
+      const response = await axios.get("https://todolist-5bna.onrender.com/data");
       console.log(response);
       setData(response.data);
     }catch(error){
@@ -23,7 +23,7 @@ const App = () => {
   const addData = async (e) => {
     e.preventDefault();
     try{
-      await axios.post("http://localhost:3000/text", {name});
+      await axios.post("https://todolist-5bna.onrender.com/text", {name});
       setName("");
       fetchData();
     } catch(error) {
@@ -33,7 +33,7 @@ const App = () => {
 
   const deleteData = async(id) => {
     try {
-      await axios.delete(`http://localhost:3000/delete/${id}`);
+      await axios.delete(`https://todolist-5bna.onrender.com/delete/${id}`);
       fetchData();
     } catch(error) {
       console.error('Error deleting data:', error);
